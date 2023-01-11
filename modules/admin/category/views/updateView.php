@@ -24,21 +24,27 @@
                     <h3 class="card-title">Form thông tin danh mục sản phẩm mới</h3>
                 </div>
                 <!--begin::Form-->
-                <form method="POST" action="">
+                <form method="POST" action="" enctype="multipart/form-data">
                     <div class="card-body">
                         <div class="form-group">
                             <label>Tên danh mục</label>
-                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên danh mục" value="<?php echo $category['name'] ?>" />
+                            <input type="text" name="name_cate" class="form-control" placeholder="Nhập vào tên danh mục" value="<?php echo $category['name_cate'] ?>" />
+                            <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
+                        </div>
+                        <div class="form-group">
+                            <label>Hình ảnh</label><br>
+                            <input type="file" name="img_cate" class="" placeholder="Hình ảnh" value="<?php echo $category['img_cate'] ?>" />
+                            <img src="<?php echo $category['img_cate']?>" alt="" style="width: 70px;">
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
                             <label for="descriptionCategoryInput">Mô tả danh mục</label>
-                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $category['description'] ?></textarea>
+                            <textarea name="des_cate" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $category['des_cate'] ?></textarea>
                         </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
-                        <a href="/?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                        <a href="?role=admin&mod=category" class="btn btn-default">Quay về</a>
                     </div>
                 </form>
                 <!--end::Form-->

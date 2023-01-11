@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.container-acount-mng{
+    background-color: #f8f8f8;
+    height: 1000px;
+}
+.acount-mng{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 30px;
+}
+.acount-mng-left{
+    background-color: white;
+}
+.acount-mng-left .block-infor{
+    text-align: center;
+    padding: 20px 0px;
+}
+.acount-mng-left .block-infor p{
+    padding-top: 20px;
+}
+.acount-mng-left .block-infor .logout{
+    text-decoration: none;
+    color: white;
+    background-color: #cd8f5c;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: block;
+    margin: 10px 30px;
+    font-size: 14px;
+}
+.acount-mng-left ul{
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+.acount-mng-left ul li:hover{
+    background-color: #cd8f5c;
+    transition: all 0.3s ease;
+}
+.acount-mng-left ul li a:hover{
+    color: white;
+}
+.acount-mng-left ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    padding: 10px 30px;
+    display: block;
+}
+.acount-mng-right{
+    background-color: white;
+    padding: 20px;
+}
+.acount-mng-right-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeee;
+}
+.acount-mng-right-top p{
+    color: #cd8f5c;
+    font-weight: bold;
+}
+.acount-mng-right-top button{
+    background-color: #cd8f5c;
+    color: white;
+    border: none;
+    padding:10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.acount-mng-right-top button:hover{
+    cursor: pointer;
+}
+.acount-mng-right-bottom{
+    padding-top: 20px;
+}
+.group-form{
+    padding-bottom: 20px;
+}
+.group-form label{
+    padding-bottom: 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+.group-form .input_acount{
+    outline: none;
+    width: 500px;
+    padding: 10px 5px;
+    border: none;
+    border: 1px solid #DDE1EF;
+    border-radius: 3px;
+}
+.group-form-button{
+    text-align: right;
+}
+.group-form-button button{
+    background-color: #cd8f5c;
+    color: white;
+    border: none;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.group-form-button a:hover{
+    cursor: pointer;
+}

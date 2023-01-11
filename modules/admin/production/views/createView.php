@@ -24,34 +24,47 @@
                 <h3 class="card-title">Form thông tin sản phẩm mới</h3>
             </div>
             <!--begin::Form-->
-            <form method="POST" action="">
+            <form method="POST" action="" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12">
                             <div class="form-group">
                                 <label>Tiêu đề sản phẩm</label>
-                                <input type="text" name="name" class="form-control" placeholder="Nhập vào tiêu đề sản phẩm" />
+                                <input type="text" name="name_pro" class="form-control" placeholder="Nhập vào tiêu đề sản phẩm" />
                             </div>
                             <div class="form-group">
                                 <label>Danh mục sản phẩm</label>
-                                <select class="form-control select2" name="category_id">
+                                <select class="form-control select2" name="id_cate">
                                     <?php foreach ($categories as $category) : ?>
-                                        <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
+                                        <option value="<?php echo $category['id_cate'] ?>"><?php echo $category['name_cate'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label>Hình ảnh</label><br>
+                                <input type="file" name="img_pro" class=""/>
+                            </div>
+                                
+                            <div class="form-group">
+                                <label>Giá cho mỗi sản phẩm</label>
+                                <div class="input-group">
+                                    <input type="text" name="price_pro" class="form-control" placeholder="Giá cho mỗi sản phẩm" aria-describedby="basic-addon2" />
+                                    <div class="input-group-append"><span class="input-group-text">VND</span></div>
+                                </div>
+                            </div>
+                                
                             <div class="form-group mb-1">
                                 <label for="descriptionCategoryInput">Chi tiết sản phẩm</label>
-                                <textarea name="description" id="kt-ckeditor-1"></textarea>
+                                <textarea name="des_pro" id="kt-ckeditor-1"></textarea>
                             </div>
                         </div>
-                        <div class="col col-4 mt-3">
+                        <!-- <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Số lượng trong kho</label>
                                 <input type="number" name="count" class="form-control" placeholder="Nhập vào số lượng" />
                             </div>
-                        </div>
-                        <div class="col col-4 mt-3">
+                        </div> -->
+                        <!-- <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Giá cho mỗi sản phẩm</label>
                                 <div class="input-group">
@@ -59,8 +72,8 @@
                                     <div class="input-group-append"><span class="input-group-text">VND</span></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col col-4 mt-3">
+                        </div> -->
+                        <!-- <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Trạng thái sản phẩm</label>
                                 <select class="form-control select2" name="status">
@@ -68,8 +81,8 @@
                                     <option value="2">Công khai</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="col col-3">
+                        </div> -->
+                        <!-- <div class="col col-3">
                             <div class="form-group">
                                 <div><label>Hình ảnh đại diện</label></div>
                                 <div class="image-input image-input-outline" id="kt_image_1">
@@ -86,8 +99,8 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col col-9">
+                        </div> -->
+                        <!-- <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
                             <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
                                 <div class="dropzone-msg dz-message needsclick">
@@ -95,13 +108,13 @@
                                     <span class="dropzone-msg-desc">Chỉ chấp nhận tải lên file hình ảnh</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary mr-2">Tạo mới</button>
                     <button type="reset" class="btn btn-secondary">Làm lại</button>
-                    <a href="/?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                    <a href="?role=admin&mod=category" class="btn btn-default">Quay về</a>
                 </div>
             </form>
             <!--end::Form-->

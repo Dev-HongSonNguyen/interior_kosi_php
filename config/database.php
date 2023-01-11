@@ -18,8 +18,8 @@
 $db = array(
     'hostname' => 'localhost',
     'username' => 'root',
-    'password' => 'vananh@2020',
-    'database' => 'duan1_shop_db',
+    'password' => '',
+    'database' => 'database_duan',
 );
 
 

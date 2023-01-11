@@ -1,0 +1,100 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.container-detail-pro{
+    background-color: white;
+    margin-top: 100px;
+}
+.detail-box-main{
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    grid-gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.detail-img img{
+    width: 100%;
+    display: block;
+}
+.detail-content h1{
+    font-size: 26px;
+    font-weight: bold;
+}
+.detail-content p{
+    font-size: 20px;
+    color: #cd8f5c;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+.detail-content .detai-content-des{
+    text-align: justify;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+.detail-content .form-add-cart input[type="number"]{
+    outline: none;
+    padding: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.detail-content .form-add-cart button[type="submit"]{
+    background-color: #cd8f5c;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.detail-content .form-add-cart button[type="submit"]:hover{
+    cursor: pointer;
+}
+.detail-cate{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.detail-cate span{
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 10px;
+}
+.detail-cate a{
+    text-decoration: none;
+    color: #777777;
+    font-size: 14px;
+}
+.detail-comment p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+.detail-comment{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.detail-comment .form-cm textarea{
+    width: 100%;
+    outline: none;
+    border-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 2px;
+}
+.detail-comment .form-cm button[type="submit"]{
+    background-color: #cd8f5c;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 2px;
+    border: none;
+    letter-spacing: 1px;
+}

@@ -211,18 +211,43 @@ function is_auth()
 {
     return isset($_SESSION["auth"]);
 }
-
 function get_auth()
 {
     return $_SESSION["auth"];
 }
 
-function request_auth($isLogin = true)
+// function request_auth($isLogin = true)
+// {
+//     if (is_auth() !== $isLogin) {
+//         header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
+//         die;
+//     }
+// }
+function request_auth_client($isLogin = true)
 {
     if (is_auth() !== $isLogin) {
-        header("Location: " . ($isLogin ? '/?role=admin&mod=auth' : '/?role=admin'));
+        header("Location: " . ($isLogin ? '?role=client&mod=auth' : '?role=client'));
         die;
     }
 }
-
+function remove_auth()
+{
+    unset($_SESSION["auth"]);
+    return true;
+}
+function request_auth($isLogin = true)
+{
+    $request_role = get_role() === 'admin' ? 2 : 1;
+    if (is_auth() !== $isLogin) {
+        header("Location: " . ($isLogin ? '?role='. ($auth['role'] == 1 ? 'client' : 'admin') . '&mod=auth' : '?role=' . ($auth['role'] == 1 ? 'client' : 'admin')));
+        die;
+    }
+    if (is_auth()) {
+        $auth = get_auth();
+        if ($auth['role'] != $request_role) {
+            header("Location: ?role=" . ($auth['role'] == 1 ? 'client' : 'admin'));
+            die;
+        }
+    }
+}
 ?>
